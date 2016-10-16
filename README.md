@@ -1,4 +1,5 @@
 # docker-tsdns
+[![Build Status](https://drone.finke.io/api/badges/sfinke/docker-tsdns/status.svg)](https://drone.finke.io/sfinke/docker-tsdns)
 
 docker tsdns image.
 
