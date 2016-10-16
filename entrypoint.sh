@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/bin/sh
+
+# /**********************/
+# /*                    */
+# /*       SETUP        */
+# /*                    */
+# /**********************/
 
 # check for tsdns settings
 if [ -f $TS_INJECTS/tsdns_settings.ini ]; then
@@ -8,8 +14,6 @@ else
   exit 1
 fi
 
-chown -R $TS_USER:$TS_USER $TS_HOME $TS_INJECTS
+chown -R $TS_USER. $TS_HOME $TS_INJECTS
 
-cd $TS_HOME
-
-sudo -u $TS_USER $TS_HOME/tsdnsserver
+sudo -i PWD=$TS_HOME -u $TS_USER $TS_HOME/tsdnsserver
